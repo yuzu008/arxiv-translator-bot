@@ -1,7 +1,7 @@
 name: Test Teams Notification
 
 on:
-  workflow_dispatch:  # 手動実行のみ
+  workflow_dispatch:
 
 jobs:
   test-teams:
