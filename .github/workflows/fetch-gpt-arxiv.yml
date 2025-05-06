@@ -24,7 +24,7 @@ jobs:
       - name: Run script
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-        run: python main.py
+        run: python main_with_teams.py
 
       - name: Upload CSV artifact
         uses: actions/upload-artifact@v4
