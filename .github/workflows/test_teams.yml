@@ -1,0 +1,25 @@
+name: Test Teams Notification
+
+on:
+  workflow_dispatch:  # 手動実行のみ
+
+jobs:
+  test-teams:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run Teams notification test
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: python test_teams_notification.py
