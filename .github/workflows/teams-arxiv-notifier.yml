@@ -1,7 +1,7 @@
 name: ArXiv通知テスト用
 
 on:
-  workflow_dispatch:  # 手動実行トリガー
+  workflow_dispatch:
 
 jobs:
   run-script:
