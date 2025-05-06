@@ -24,7 +24,9 @@ jobs:
       - name: Run script
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
         run: python main_debug_teams.py
+
       - name: Upload CSV artifact
         uses: actions/upload-artifact@v4
         with:
