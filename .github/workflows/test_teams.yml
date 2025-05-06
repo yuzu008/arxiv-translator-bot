@@ -19,12 +19,7 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-      - name: Run       - name: Teams 通知テストを実行する
+      - name: Send Teams Test Notification
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
         run: python test_teams_webhook.py
-
-
-        env:
-          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
-        run: python test_teams_notification.py
